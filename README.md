@@ -1,5 +1,5 @@
 # shiertier_i18n
-english | [中文](README_zh.md)
+english | [中文](https://github.com/shiertier-utils/shiertier_i18n/blob/main/README_zh.md)
 
 ## Introduction
 
