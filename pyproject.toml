@@ -25,9 +25,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "gettext",
-]
+dependencies = []
 
 [tool.setuptools]
-packages = {find = {"where": "src"}}
+packages = {find = {where = ["src"]}}

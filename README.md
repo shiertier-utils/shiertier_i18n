@@ -1,53 +1,55 @@
 # shiertier_i18n
-中文 | [english](README_en.md)
+english | [中文](README_zh.md)
 
-## 简介
+## Introduction
 
-`shiertier_i18n` 是一个简单的 Python 国际化 (i18n) 库，旨在帮助开发者轻松地将应用程序本地化为不同的语言。该库基于 `gettext` 模块，支持从环境变量中自动检测语言和本地化目录，并提供了一个简单的接口来翻译字符串。
+`shiertier_i18n` is a simple internationalization (i18n) library for Python, designed to help developers easily localize their applications into different languages. The library is based on the `gettext` module and supports automatic detection of language and localization directories from environment variables, providing a simple interface for translating strings.
 
-## 安装
+## Installation
 
-你可以通过 `pip` 安装 `shiertier_i18n`：
+You can install `shiertier_i18n` via `pip`:
 
 ```bash
-pip install shiertier_i18n
+pip install git+https://github.com/shiertier/shiertier_i18n.git
 ```
 
-## 使用方法
+Please note that this project is still under development.
 
-### 初始化
+## Usage
 
-首先，你需要初始化 `I18n` 类：
+### Initialization
+
+First, you need to initialize the `I18n` class:
 
 ```python
 from shiertier_i18n import I18n
 
-# 使用默认语言和本地化目录
+# Using default language and localization directory
 i18n = I18n()
 
-# 或者指定语言和本地化目录
+# Or specify the language and localization directory
 i18n = I18n(language_str='zh_CN', locales_dir='/path/to/locales')
 ```
 
-### 翻译字符串
+### Translating Strings
 
-你可以使用 `translate` 方法来翻译字符串：
+You can use the `translate` method to translate strings:
 
 ```python
 translated_str = i18n.translate("Hello, world!")
 print(translated_str)
 ```
 
-你还可以传递一个字典来替换翻译后的字符串中的占位符：
+You can also pass a dictionary to replace placeholders in the translated string:
 
 ```python
 translated_str = i18n.translate("Hello, $$name$$!", replace_dict={'$$name$$': 'Alice'})
 print(translated_str)
 ```
 
-### 快捷方式
+### Shortcut
 
-如果你只需要快速翻译一个字符串，可以使用 `easy_i18n` 快捷方式：
+If you only need to quickly translate a string, you can use the `easy_i18n` shortcut:
 
 ```python
 from shiertier_i18n import easy_i18n
@@ -56,32 +58,32 @@ translated_str = easy_i18n("Hello, world!")
 print(translated_str)
 ```
 
-## 配置
+## Configuration
 
-### 语言
+### Language
 
-默认情况下，`I18n` 类会从环境变量 `LANGUAGE` 中获取语言设置。如果没有设置 `LANGUAGE`，则默认使用 `en_US`。
+By default, the `I18n` class will get the language setting from the `LANGUAGE` environment variable. If `LANGUAGE` is not set, it defaults to `en_US`.
 
-你也可以在初始化 `I18n` 类时指定语言：
+You can also specify the language when initializing the `I18n` class:
 
 ```python
 i18n = I18n(language_str='zh_CN')
 ```
 
-### 本地化目录
+### Localization Directory
 
-默认情况下，`I18n` 类会从环境变量 `SHIERTIER_LOCALES_DIR` 中获取本地化目录。如果没有设置 `SHIERTIER_LOCALES_DIR`，则默认使用用户主目录下的 `.shiertier/locales` 目录。
+By default, the `I18n` class will get the localization directory from the `SHIERTIER_LOCALES_DIR` environment variable. If `SHIERTIER_LOCALES_DIR` is not set, it defaults to the `.shiertier/locales` directory under the user's home directory.
 
-你也可以在初始化 `I18n` 类时指定本地化目录：
+You can also specify the localization directory when initializing the `I18n` class:
 
 ```python
 i18n = I18n(locales_dir='/path/to/locales')
 ```
 
-## 依赖
+## Dependencies
 
 - `gettext`
 
-## 许可证
+## License
 
-本项目基于 MIT 许可证发布。详情请参阅 [LICENSE](LICENSE) 文件。
+This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.
