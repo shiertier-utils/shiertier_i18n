@@ -10,7 +10,7 @@ english | [中文](https://github.com/shiertier-utils/shiertier_i18n/blob/main/R
 You can install `shiertier_i18n` via `pip`:
 
 ```bash
-pip install git+https://github.com/shiertier/shiertier_i18n.git
+pip install git+https://github.com/shiertier-utils/shiertier_i18n.git
 ```
 
 Please note that this project is still under development.

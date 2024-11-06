@@ -9,7 +9,7 @@
 你可以通过以下方式安装 `shiertier_i18n`：
 
 ```bash
-pip install git+https://github.com/shiertier/shiertier_i18n.git
+pip install git+https://github.com/shiertier-utils/shiertier_i18n.git
 ```
 
 请注意，项目仍在开发中。

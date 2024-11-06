@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shiertier_i18n"
-version = "0.0.3"
+version = "0.0.4"
 description = "A simple internationalization (i18n) library for Python."
 readme = "README.md"
 requires-python = ">=3.7"
@@ -24,7 +24,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = ["shiertier_logger"]
 
 [tool.setuptools]
 packages = {find = {where = ["src"]}}

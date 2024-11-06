@@ -1,6 +1,7 @@
 import gettext
 import os.path
 from os import environ
+from shiertier_logger import easy_logger
 
 __all__ = ['I18n', 'easy_i18n']
 
@@ -11,6 +12,7 @@ class I18n:
 
         if not language_str:
             self.language_str = environ.get('LANGUAGE', 'en_US')
+            easy_logger.debug(f"language_str is not set, use default value: {self.language_str}")
         else:
             self.language_str = language_str
 
